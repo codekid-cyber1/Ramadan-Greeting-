@@ -1,82 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramadan Mubarak Greeting Generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #020617;
-      }
-      .font-serif {
-        font-family: 'Playfair Display', serif;
-      }
-      .gold-gradient {
-        background: linear-gradient(
-          to right,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramadan Mubarak Greeting Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #020617;
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .gold-gradient {
+      background: linear-gradient(to right,
           #fde68a 0%,
           #f59e0b 25%,
           #fbbf24 50%,
           #f59e0b 75%,
-          #fde68a 100%
-        );
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textShimmer 6s linear infinite;
+          #fde68a 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 6s linear infinite;
+    }
+
+    .gold-border {
+      border-image: linear-gradient(to right, #fde68a, #f59e0b) 1;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
       }
-      .gold-border {
-        border-image: linear-gradient(to right, #fde68a, #f59e0b) 1;
+
+      50% {
+        transform: translateY(-20px);
       }
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0;
       }
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
+
+      100% {
+        background-position: 200% 0;
       }
-      @keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
+    }
+
+    @keyframes textShimmer {
+      to {
+        background-position: 200% center;
       }
-      @keyframes textShimmer {
-        to {
-          background-position: 200% center;
-        }
-      }
-      .shimmer-gold {
-        background: linear-gradient(
-          90deg,
+    }
+
+    .shimmer-gold {
+      background: linear-gradient(90deg,
           transparent,
           rgba(251, 191, 36, 0.15),
           rgba(251, 191, 36, 0.25),
           rgba(251, 191, 36, 0.15),
-          transparent
-        );
-        background-size: 200% 100%;
-        animation: shimmer 3s infinite linear;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
-  }
-}
-</script>
+          transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+  </style>
+  <script type="module" src="/index.tsx"></script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>

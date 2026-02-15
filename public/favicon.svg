@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40" fill="none" role="img" aria-labelledby="ramadanLogoTitle">
+  <title id="ramadanLogoTitle">Ramadan Mubarak Crescent and Star Logo</title>
+  <defs>
+    <linearGradient id="premiumGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" /> <stop offset="100%" stop-color="#b45309" /> </linearGradient>
+  </defs>
+  <path d="M14 54C4 34 18 8 40 4C30 14 20 28 14 54Z" fill="url(#premiumGold)"/>
+  <path d="M52 4L54.5 10L60 12.5L54.5 15L52 21L49.5 15L44 12.5L49.5 10Z" fill="url(#premiumGold)"/>
+</svg>
