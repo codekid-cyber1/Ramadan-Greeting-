@@ -411,7 +411,7 @@ const App: React.FC = () => {
                   className="relative z-10"
                 >
                   <img
-                    src="/moon.png"
+                    src="/moon.svg"
                     alt="Ornate Moon"
                     className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_0_35px_rgba(245,158,11,0.5)]"
                     style={{
